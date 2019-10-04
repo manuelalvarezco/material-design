@@ -6,6 +6,12 @@
 }
 
 .shrine-logo {
+    &:not(.mdc-text-field--invalid) {
+        @include mdc-text-field-label-color(on-primary);
+    }
+    &.mdc-text-field--focused:not(.mdc-text-field--invalid) {
+        @include mdc-text-field-label-color(on-primary);
+    }
     width: 150px;
     height: 150px;
     padding-top: 80px;
@@ -19,6 +25,7 @@
     margin: 20px auto;
 }
 
+//Versión 2
 .button-container {
     display: flex;
     justify-content: flex-end;
@@ -28,4 +35,10 @@
 
 .button-container button {
     margin: 3px;
+}
+
+//Versión 3
+.shrine-login {
+    background-color: $mdc-theme-background;
+    color: $mdc-theme-on-background;
 }
